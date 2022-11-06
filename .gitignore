@@ -1,0 +1,8 @@
+frames*/
+/para_anotar
+project*/
+raw/
+safe/
+yolov5/
+.ipynb_checkpoints/
+yolov5s.pt
