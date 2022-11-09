@@ -1,8 +1,6 @@
-frames*/
-/para_anotar
-project*/
+data/*
 raw/
-safe/
+cvat/
 yolov5/
 .ipynb_checkpoints/
 yolov5s.pt
