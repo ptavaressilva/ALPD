@@ -4,3 +4,4 @@ cvat/
 yolov5/
 .ipynb_checkpoints/
 yolov5s.pt
+.env

@@ -20,18 +20,26 @@ These images were then annotated with bounding boxes using [CVAT](https://github
 
 ## Prediction with pretained model
 
-A prediction was made with YOLOv5s out of the box (see noteblook 03). As YOLOv5 was pretrained with COCO, it recognizes the vehicle classes in that dataset, but not the license plates.
+A prediction was made with YOLOv5s out of the box (see [03 Yolo v5 prediction](03\ Yolo\ v5\ prediction.ipynb')). This model was pretrained with COCO and recognizes the vehicle classes in that dataset, but not the license plates.
 
 The COCO vehicle clases are:
 
 ![COCO vehicle clases](img/COCO_vehicles.png)
 
-The dataset created for this project has a new class called `license_plate`, as well as the COCO clases considered relevant for our purposes (car, truck and bus).
+The dataset created for this project is annotated with a new class called `license_plate`, as well as the COCO clases considered relevant for our purposes (car, truck and bus).
+
+## Neptune setup
+
+In order to track experiments and save artifacts with Neptune, first create an account at Neptune.ai and then a project. Once the project is created, get the correspoding values for `neptune_project`and `neptune_api_token`.
+
+We will use [IPython Secrets](https://ipython-secrets.readthedocs.io/en/latest/) to keep the secrets secure and make it possible to use them safely in Jupyter notebooks.
+
+When you run the [05 Train YOLOv5s](05\ Train\ YOLOv5s.ipynb) notebook for the first time it will ask you to input the two values. IPython Secrets will store then in your computer's keyring and you can use them in the notebook after that without having to type them in again.
 
 ## Next steps
 
 This project is ongoing. The next steps are:
 
-1. Setup Neptune.ai for experiment logging and artifact registry.
+1. Complete the setup of Neptune.ai for experiment logging and artifact registry.
 2. Convert the CVAT output from Yolo v1.1 format to the format required by YOLOv5.
 3. Train YOLOv5s with a smaller set of 200 training images, in order to test the training setup.
